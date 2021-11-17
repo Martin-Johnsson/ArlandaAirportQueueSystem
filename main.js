@@ -13,7 +13,7 @@ addToQueue.addEventListener("click", () => {
   newLi.style.color = "white";
   if (queue.innerHTML.length >= 1) {
     queueHeading.textContent = "";
-    nameInput.value = " ";
+    nameInput.value = "";
   }
 });
 fastTrack.addEventListener("click", () => {
@@ -21,7 +21,7 @@ fastTrack.addEventListener("click", () => {
   newLi.textContent = nameInput.value;
   queue.prepend(newLi);
   newLi.style.color = "white";
-  nameInput.value = " ";
+  nameInput.value = "";
 });
 checkInBtn.addEventListener("click", () => {
   queue.removeChild(queue.childNodes[0]);
@@ -30,6 +30,7 @@ checkInBtn.addEventListener("click", () => {
     queueHeading.textContent = "Kön är för närvarande tom.";
   }
 });
+
 addToQueue.style.backgroundColor = "lightblue";
 fastTrack.style.backgroundColor = "lightgreen";
 queue.style.backgroundColor = "##ffe6cc";
